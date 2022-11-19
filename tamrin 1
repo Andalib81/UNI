@@ -1,0 +1,15 @@
+using System;
+internal class Program
+{
+	static void Main(string[] args)
+	{
+		Console.WriteLine("Enter your number: ");
+		int n = Convert.ToInt32(Console.ReadLine());
+		p(n);
+	}
+	static void p(int n)
+	{
+		Console.WriteLine(Math.Pow(n, 2));
+		Console.WriteLine(Math.Pow(n, 3));
+	}
+}
