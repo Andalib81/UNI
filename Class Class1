@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    internal class Class1
+    {
+        private char shape;
+        private char op;
+        private double result = 0;
+        public char Shape 
+        {
+            get { return shape; }
+            set { shape = value; }
+        }
+        public char Op 
+        {
+            get { return op; }
+            set { op = value; }
+        }
+        public double Result()
+        {
+            if (Op == 'A')
+            {
+                switch (shape)
+                {
+                    case 'A':
+                        Console.WriteLine("Diameter:");
+                        double Dia = Convert.ToDouble(Console.ReadLine());
+                        result = Dia * Math.PI;
+                        break;
+                    case 'B':
+                        Console.WriteLine("Side:");
+                        double Sid = Convert.ToDouble(Console.ReadLine());
+                        result = Sid * 4;
+                        break;
+                    case 'C':
+                        Console.WriteLine("Side A:");
+                        double CSA = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Side B:");
+                        double CSB = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Side C:");
+                        double CSC = Convert.ToDouble(Console.ReadLine());
+                        result = CSA + CSB + CSC;
+                        break;
+                    case 'D':
+                        Console.WriteLine("Side A:");
+                        double DSA = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Side B:");
+                        double DSB = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Side C:");
+                        double DSC = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Side D:");
+                        double DSD = Convert.ToDouble(Console.ReadLine());
+                        result = DSA + DSB + DSC + DSD;
+                        break;
+                    default:
+                        Console.WriteLine("Wrong value!");
+                        break;
+                }
+            }
+
+            if (Op == 'B')
+            {
+                switch (Shape)
+                {
+                    case 'A':
+                        Console.WriteLine("Radius:");
+                        double Ra = Convert.ToDouble(Console.ReadLine());
+                        result = Math.Pow(Ra, 2) * Math.PI;
+                        break;
+                    case 'B':
+                        Console.WriteLine("Side A:");
+                        double BSA = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Side B:");
+                        double BSB = Convert.ToDouble(Console.ReadLine());
+                        result = BSA * BSB;
+                        break;
+                    case 'C':
+                        Console.WriteLine("Side A:");
+                        double CSA = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Height:");
+                        double CSH = Convert.ToDouble(Console.ReadLine());
+                        result = (CSA * CSH) / 2;
+                        break;
+                    case 'D':
+                        Console.WriteLine("Side A:");
+                        double DSA = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Side B:");
+                        double DSB = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Height:");
+                        double DSH = Convert.ToDouble(Console.ReadLine());
+                        result = ((DSA + DSB) / 2) * DSH;
+                        break;
+                    default:
+                        Console.WriteLine("Wrong value!");
+                        break;
+                }
+            }
+
+            return result;
+        }
+        
+
+    }
+}
